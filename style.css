@@ -131,6 +131,9 @@ header {
     font-size: 2.3rem;
     color: #fff;
     transition:  all .5s ease-in-out;
+    opacity: 0;
+    animation: spin .5s forwards;
+    animation-delay: .7s;
 }
 
 .logo:hover {
@@ -165,7 +168,7 @@ header {
 
 .headline {
     color: #ffffff;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: .5rem;
@@ -219,16 +222,15 @@ header {
     margin-top: 3.9rem;
 }
 
-.global-headline .logo {
-    font-size: 2.3rem;
+
+.black {
     color: #121212;
-    transition:  all .5s ease-in-out;
-    margin-right: 20px;
 }
 
-.global-headline .logo:hover {
-    color: #41b1f2;
+.white {
+    color: #fff;
 }
+
 
 #about-me .global-headline {
     margin-top: 6.9rem;
@@ -257,6 +259,49 @@ header {
 
 .global-headline .headline {
     color: #121212;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+    animation: scale .5s forwards;
+    margin-bottom: 1.5rem;
+}
+
+
+/* SKILLS */
+
+#skills {
+    background-color: #121212;
+}
+
+
+.skills-group {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.skills-group i {
+    font-size: 20rem;
+    text-align: center;
+    color: #41b1f2;
+
+}
+
+.skills-description {
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+.skills-description {
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+.headline-skills {
+    color: #fff;
     font-size: 2.7rem;
     text-transform: uppercase;
     font-weight: 800;
@@ -342,6 +387,13 @@ header {
         padding-right: 7rem;
     }
 
+    .skills-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+        margin-top: 5rem;
+    }
+
 
 }
 
@@ -378,3 +430,22 @@ header {
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
