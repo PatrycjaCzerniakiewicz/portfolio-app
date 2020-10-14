@@ -122,6 +122,91 @@ header {
     color: #41b1f2;
 }
 
+.logo {
+    font-size: 2.3rem;
+    color: #fff;
+    transition:  all .5s ease-in-out;
+}
+
+.logo:hover {
+    color: #41b1f2;
+}
+
+
+/* HOME */
+#home {
+    width: 100%;
+    height: 100vh;
+    background: url("img/bgc6.jpg") center no-repeat;
+    background-size: cover;
+    background-position-y: -160px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.name-headline {
+    font-size: 2.5rem;
+    color: #41b1f2;
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .5s;
+    margin-bottom: 1.5rem;
+}
+
+.headline {
+    color: #ffffff;
+    font-size: 2.7rem;
+    font-family: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+    animation: scale .5s forwards;
+    margin-bottom: 1.5rem;
+}
+
+.single-animation {
+    opacity: 0;
+    animation: fadeDown .5s forwards;
+    animation-delay: 1.5s;
+}
+
+.headline-description h5 {
+    color: #ffffff  ;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.cta-btn {
+    font-size: 1.1rem;
+    background-color: #41b1f2;
+    padding: .9rem 1.8rem;
+    color: #fff;
+    border-radius: .5rem;
+    transition: background-color .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    color: #121212;
+    background-color: #fff;
+}
+
 
 
 /* MEDIA QUERIES */
@@ -174,12 +259,48 @@ header {
         bottom: -3px;
     }
 
-    .logo {
-        font-size: 2.3rem;
-        color: #fff;
-        transition:  all .5s ease-in-out;
+    .name-headline {
+        font-size: 3.5rem;
     }
 
-    .logo:hover {
-        color: #41b1f2;
+    .headline {
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
     }
+
+
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
