@@ -22,6 +22,11 @@ a {
     padding: 0 2.4rem;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
 
 /* NAV */
 
@@ -143,6 +148,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .name-headline {
@@ -160,7 +166,6 @@ header {
 .headline {
     color: #ffffff;
     font-size: 2.7rem;
-    font-family: #ffffff;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: .5rem;
@@ -198,7 +203,7 @@ header {
     padding: .9rem 1.8rem;
     color: #fff;
     border-radius: .5rem;
-    transition: background-color .5s;
+    transition: background-color .6s ease-in-out;
 }
 
 .cta-btn:hover,
@@ -207,10 +212,66 @@ header {
     background-color: #fff;
 }
 
+/* ABOUT ME */
 
+.global-headline {
+    text-align: center;
+    margin-top: 3.9rem;
+}
+
+.global-headline .logo {
+    font-size: 2.3rem;
+    color: #121212;
+    transition:  all .5s ease-in-out;
+    margin-right: 20px;
+}
+
+.global-headline .logo:hover {
+    color: #41b1f2;
+}
+
+#about-me .global-headline {
+    margin-top: 6.9rem;
+}
+
+.me-info {
+    text-align: center;
+}
+
+.me-description {
+    margin-bottom: 3rem;
+    margin-top: -15rem;
+}
+
+.me-description p {
+    line-height: 1.8rem;
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.me-img img {
+    border-radius: .5rem;
+    padding: 30px;
+}
+
+.global-headline .headline {
+    color: #121212;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+    animation: scale .5s forwards;
+    margin-bottom: 1.5rem;
+}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 900px) {
+
+    section {
+        padding: 7.9rem;
+    }
 
     .menu-toggle {
         display: none;
@@ -266,6 +327,19 @@ header {
     .headline {
         font-size: 4.7rem;
         letter-spacing: .8rem;
+    }
+
+    .me-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .me-info > div {
+        flex: 1;
+    }
+
+    .padding-right {
+        padding-right: 7rem;
     }
 
 
