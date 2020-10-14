@@ -25,3 +25,70 @@ sr.reveal('.animate-right', {
     distance: '25rem',
     delay: 600
 });
+
+
+// SIDE-BAR
+
+const backgrounds = [
+    "img/1.jpg",
+    "img/2.jpg",
+    "img/3.jpg",
+    "img/4.jpg"
+];
+
+$(".side-bar > a").siblings().hide();
+
+$(".side-bar > a").click(function() {
+    $(this).siblings().toggle();
+    $(this).toggleClass("open-bar");
+
+    $(".back1").css("background-image", "url(" + backgrounds[0] + ")");
+    $(".back2").css("background-image", "url(" + backgrounds[1] + ")");
+    $(".back3").css("background-image", "url(" + backgrounds[2] + ")");
+    $(".back4").css("background-image", "url(" + backgrounds[3] + ")");
+
+    if ($(this).hasClass("open-bar")) {
+
+        $(".side-bar").animate({
+            width: "30%"
+        }, 1000, function() {
+            $(".side-bar > a").text("Close");
+        });
+
+    } else {
+
+        $(".side-bar").animate({
+
+            width: "12%"
+        }, 1000, function() {
+            $(".side-bar > a").text("Open");
+        });
+    }
+})
+
+$(".newBackground > div").click(function() {
+
+    $(this).toggleClass("addBorder");
+
+    $(this).siblings().removeClass("addBorder");
+})
+
+
+$("#updateButton").click(function() {
+    const newIntroText = $("#newText").val();
+    const newIntroTextColor = $("#newTextColor").val();
+
+    $(".name-headline").text(newIntroText);
+    $(".name-headline").css("color", newIntroTextColor);
+
+    if ($(".back1").hasClass("addBorder")) {
+        $("#home").css("background-image", "url(" + backgrounds[0] + ")");
+    } else if ($(".back2").hasClass("addBorder")) {
+        $("#home").css("background-image", "url(" + backgrounds[1] + ")");
+    } else if ($(".back3").hasClass("addBorder")) {
+        $("#home").css("background-image", "url(" + backgrounds[2] + ")");
+    } else {
+        $("#home").css("background-image", "url(" + backgrounds[3] + ")");
+    }
+
+});
