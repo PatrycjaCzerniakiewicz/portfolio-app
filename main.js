@@ -26,6 +26,20 @@ sr.reveal('.animate-right', {
     delay: 600
 });
 
+sr.reveal('.animate-top', {
+    origin: 'top',
+    duration: 1000,
+    distance: '25rem',
+    delay: 600
+});
+
+sr.reveal('.animate-bottom', {
+    origin: 'bottom',
+    duration: 1000,
+    distance: '25rem',
+    delay: 600
+});
+
 
 // SIDE-BAR
 
@@ -85,10 +99,13 @@ $("#updateButton").click(function() {
         $("#home").css("background-image", "url(" + backgrounds[0] + ")");
     } else if ($(".back2").hasClass("addBorder")) {
         $("#home").css("background-image", "url(" + backgrounds[1] + ")");
+        $("#home").css("background-position-y", "0");
     } else if ($(".back3").hasClass("addBorder")) {
         $("#home").css("background-image", "url(" + backgrounds[2] + ")");
+        $("#home").css("background-position-y", "0");
     } else {
         $("#home").css("background-image", "url(" + backgrounds[3] + ")");
+        $("#home").css("background-position-y", "0");
     }
 
 });
