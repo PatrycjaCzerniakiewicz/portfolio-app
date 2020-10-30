@@ -66,7 +66,7 @@ $(".side-bar > a").click(function() {
         $(".side-bar").animate({
             width: "30%"
         }, 1000, function() {
-            $(".side-bar > a").text("Close");
+            $(".side-bar > a").text("Zamknij");
         });
 
     } else {
@@ -75,7 +75,7 @@ $(".side-bar > a").click(function() {
 
             width: "12%"
         }, 1000, function() {
-            $(".side-bar > a").text("Open");
+            $(".side-bar > a").text("Otwórz");
         });
     }
 })
