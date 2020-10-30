@@ -43,10 +43,19 @@ header {
 }
 
 .nav {
-    height: 7.2rem;
+    height: 5rem;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    background-color: #121212;
+    width: 100%;
+    opacity: 0.8;
+    padding: 0 2rem;
+
 }
 
 .menu-toggle {
@@ -155,6 +164,8 @@ header {
     width: 12%;
     text-align: center;
     border-radius: .5rem;
+    display: none;
+    z-index: 100;
 }
 
 .side-bar a {
@@ -207,7 +218,7 @@ header {
 
 /* HOME */
 #home {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url("img/bgc6.jpg") center no-repeat;
     background-size: cover;
@@ -216,7 +227,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 2rem;
 }
 
 .name-headline {
@@ -229,6 +240,7 @@ header {
     animation: fadeUp .5s forwards;
     animation-delay: .5s;
     margin-bottom: 1.5rem;
+    padding-top: 5rem;
 }
 
 .headline {
@@ -318,7 +330,7 @@ header {
 
 .me-img img {
     border-radius: .5rem;
-    padding: 30px;
+    padding: 10rem;
 }
 
 .global-headline .headline {
@@ -357,12 +369,6 @@ header {
 
 .skills-description {
     padding-top: 3rem;
-    margin-bottom: 0;
-}
-
-.skills-description {
-    padding-top: 3rem;
-    margin-bottom: 0;
 }
 
 .headline-skills {
@@ -377,9 +383,93 @@ header {
 }
 
 /* PROJECTS */
-.image-group img {
-    border-radius: .5rem;
+
+.projects-info {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    margin-bottom: 5rem;
 }
+
+.projects__list {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.projects__list--item {
+    position: relative;
+    min-height: 50vw;
+    width: 50vw; 
+    border-radius: 0.5rem;
+
+}
+
+.projects__list--item--1 {
+    background-image: url(img/portfolio-app.png);
+    background-position: center;
+    background-size: cover;
+
+} 
+
+.projects__list--item--2 {
+    background-image: url(img/quiz-app.png);
+    background-size: cover;
+    background-position: center
+}
+
+.projects__list--item--3 {
+    background-image: url(img/books-app.png);
+    background-size: cover;
+    background-position: center
+}
+
+.projects__list--item h3 {
+    background-color: #333333;
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-family: 'Passero One', cursive;
+    opacity: 0.9;
+}
+
+.projects__list--link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #41b1f2;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+.projects__list--link:hover {
+    opacity: 0.7;
+}
+
+.projects__list--link p {
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
 
 /* FOOTER */
 footer {
@@ -477,11 +567,10 @@ footer {
     border: none;
     color: #121212;
     cursor: pointer;
-    font-size: 1.6rem;
-    padding: 1px .6rem;
     position: absolute;
     top: 50%;
-    right: 1rem;
+    font-size: 1.6rem;
+    padding: 1px .6rem;
     transform: translateY(-50%);
     margin-left: 20rem;
     transition: color .5s;
@@ -498,12 +587,17 @@ footer {
         padding: 7.9rem;
     }
 
+    .side-bar {
+        display: inherit;
+    }
+
     .menu-toggle {
         display: none;
     }
 
     .nav {
         justify-content: space-between;
+
     }
 
     .nav-list {
@@ -574,6 +668,27 @@ footer {
         margin-top: 5rem;
     }
 
+    .skills-description {
+        padding-top: 0;
+    }
+
+    .projects__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+        align-content: center;
+    }
+ 
+    .projects__list--item {
+        min-height: calc(100vw / 4);
+        width: calc(100vw / 4);
+    }
+
+    .projects__list--item h3 {
+        font-size: 3.3rem;
+        line-height: 6rem;
+    }
+
     .footer-content {
         max-width: 77.5rem;
         margin: auto;
@@ -601,10 +716,8 @@ footer {
     }
 
     .newsletter-btn {
-        margin-left: 7.5rem;
+        right: 1rem;
     }
-
-
 }
 
 
