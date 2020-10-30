@@ -160,7 +160,7 @@ header {
     height: 25vh;
     position: absolute;
     left: 0;
-    top: 10vh;
+    top:10vh;
     width: 12%;
     text-align: center;
     border-radius: .5rem;
@@ -186,8 +186,9 @@ header {
 .newTextColor,
 .jobTitle,
 .jobTitleColor {
-    margin-bottom: 5px;
+    margin: 0.6rem 0;
     color: #fff;
+    font-size: 1.2rem;
 }
 
 #updateButton {
@@ -198,10 +199,10 @@ header {
 .newBackground {
     display: flex;
     justify-content: space-around;
-    background-color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    background-color: #121212;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 0.8rem;
 }
 
 .newBackground>div {
@@ -210,6 +211,7 @@ header {
     background-color: #fff;
     background-size: cover;
     cursor: pointer;
+    border-radius: 0.5rem;
 }
 
 .addBorder {
